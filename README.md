@@ -22,6 +22,14 @@ pip install -r requirements.txt
 | `scripts/load_data.py` | Reads the ARFF files, checks duplicates, missing and infinite values, writes one CSV |
 | `scripts/train.py` | Compares models at each horizon, then looks closely at the 1 year horizon |
 
+## Tests
+
+```sh
+python -m pytest
+```
+
+6 unit tests in `tests/` cover reading the ARFF files (missing values, column names), removing duplicates, the Altman Z' formula, the top 10% capture metric, and that X24 stays out of the features.
+
 ## Data checks before modelling
 
 - **401 duplicate rows** (identical ratios and label in the same file). Left in, they could sit in both the training and test folds and inflate the scores, so they are removed.
