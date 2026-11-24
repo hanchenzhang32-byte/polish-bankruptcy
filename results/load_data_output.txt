@@ -1,0 +1,20 @@
+rows by horizon:
+               size  sum      mean
+years_ahead                      
+1             5910  410  0.069374
+2             9792  515  0.052594
+3            10503  495  0.047129
+4            10173  400  0.039320
+5             7027  271  0.038566
+exact duplicate rows within a horizon: 401
+same figures but different label: 0
+most missing columns:
+ X37    0.437
+X21    0.135
+X27    0.064
+X60    0.050
+X45    0.049
+dtype: float64
+rows with at least one missing value: 54.0%
+infinite values: 0
+wrote 43,004 rows to data/companies.csv

@@ -1,0 +1,145 @@
+horizon 1: done
+horizon 2: done
+horizon 3: done
+horizon 4: done
+horizon 5: done
+model        Altman Z' (no training)  ...  Missing pattern only
+years_ahead                           ...                      
+1                              0.248  ...                 0.478
+2                              0.114  ...                 0.372
+3                              0.092  ...                 0.230
+4                              0.062  ...                 0.222
+5                              0.093  ...                 0.444
+
+[5 rows x 5 columns]
+model        Altman Z' (no training)  ...  Missing pattern only
+years_ahead                           ...                      
+1                              0.704  ...                 0.750
+2                              0.659  ...                 0.754
+3                              0.657  ...                 0.740
+4                              0.605  ...                 0.719
+5                              0.634  ...                 0.866
+
+[5 rows x 5 columns]
+model        Altman Z' (no training)  ...  Missing pattern only
+years_ahead                           ...                      
+1                              0.380  ...                 0.539
+2                              0.273  ...                 0.528
+3                              0.254  ...                 0.481
+4                              0.168  ...                 0.415
+5                              0.266  ...                 0.638
+
+[5 rows x 5 columns]
+{
+  "test": {
+    "Altman Z' (no training)": {
+      "pr_auc": 0.2593287419610301,
+      "roc_auc": 0.708806961432626,
+      "top10_capture": 0.38235294117647056
+    },
+    "Logistic regression": {
+      "pr_auc": 0.6798653065360191,
+      "roc_auc": 0.935031911368515,
+      "top10_capture": 0.7058823529411765
+    },
+    "Gradient boosting": {
+      "pr_auc": 0.7587756729354385,
+      "roc_auc": 0.947515523476106,
+      "top10_capture": 0.7450980392156863
+    },
+    "Gradient boosting, gaps filled": {
+      "pr_auc": 0.7432179702815677,
+      "roc_auc": 0.9456210110789356,
+      "top10_capture": 0.7352941176470589
+    }
+  },
+  "test_size": {
+    "n": 1463,
+    "bankrupt": 102
+  },
+  "missing_by_class": {
+    "X21": {
+      "0": 0.0,
+      "1": 0.248
+    },
+    "X27": {
+      "0": 0.051,
+      "1": 0.281
+    }
+  },
+  "with_X24": {
+    "pr_auc": 0.7717152383958029,
+    "roc_auc": 0.9491579144515999,
+    "top10_capture": 0.7549019607843137
+  },
+  "brier": {
+    "gradient_boosting": 0.031330401747382476,
+    "always_base_rate": 0.06485891085244899
+  },
+  "threshold": {
+    "chosen": 0.032952139453130684,
+    "at_chosen": {
+      "caught": 86,
+      "missed": 16,
+      "false_alarms": 130,
+      "cost": 290
+    },
+    "at_0.5": {
+      "caught": 59,
+      "missed": 43,
+      "false_alarms": 15,
+      "cost": 445
+    },
+    "flag_nobody_cost": 1020
+  },
+  "top_features": [
+    {
+      "feature": "X27",
+      "meaning": "operating profit / financial expenses",
+      "pr_auc_drop": 0.366533051087078,
+      "std": 0.014129327193447156
+    },
+    {
+      "feature": "X21",
+      "meaning": "sales growth",
+      "pr_auc_drop": 0.24422456588515368,
+      "std": 0.015851323271366437
+    },
+    {
+      "feature": "X34",
+      "meaning": "operating expenses / total liabilities",
+      "pr_auc_drop": 0.06759690139385982,
+      "std": 0.013758484147361241
+    },
+    {
+      "feature": "X58",
+      "meaning": "total costs / sales",
+      "pr_auc_drop": 0.04386807273636908,
+      "std": 0.00770044567676922
+    },
+    {
+      "feature": "X56",
+      "meaning": "gross margin",
+      "pr_auc_drop": 0.019165195847400663,
+      "std": 0.00483347739532467
+    },
+    {
+      "feature": "X46",
+      "meaning": "(current assets - inventory) / short-term liabilities",
+      "pr_auc_drop": 0.013625553077840746,
+      "std": 0.003250439219619696
+    },
+    {
+      "feature": "X35",
+      "meaning": "profit on sales / total assets",
+      "pr_auc_drop": 0.011885449897368594,
+      "std": 0.0030758734084946377
+    },
+    {
+      "feature": "X5",
+      "meaning": "cash runway in days",
+      "pr_auc_drop": 0.007793239957169717,
+      "std": 0.002549001639122758
+    }
+  ]
+}
